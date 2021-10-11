@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">figma_task</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="create">Create</string>
+    <string name="music_image">login image</string>
 </resources>
