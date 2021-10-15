@@ -4,9 +4,23 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/figma_task/app/src/main/res/drawable/button_background.xml" value="0.2203125" />
+        <entry key="..\:/figma_task/app/src/main/res/drawable/detail_add_button_background.xml" value="0.2203125" />
+        <entry key="..\:/figma_task/app/src/main/res/drawable/ic_add.xml" value="0.2203125" />
+        <entry key="..\:/figma_task/app/src/main/res/drawable/ic_pause.xml" value="0.19054054054054054" />
         <entry key="..\:/figma_task/app/src/main/res/drawable/input_background.xml" value="0.2203125" />
+        <entry key="..\:/figma_task/app/src/main/res/drawable/text_background.xml" value="0.165234375" />
+        <entry key="..\:/figma_task/app/src/main/res/drawable/view_background.xml" value="0.2203125" />
+        <entry key="..\:/figma_task/app/src/main/res/layout-v23/game_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/figma_task/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/figma_task/app/src/main/res/layout/login_screen.xml" value="0.25" />
+        <entry key="..\:/figma_task/app/src/main/res/layout/detail_screen.xml" value="0.22" />
+        <entry key="..\:/figma_task/app/src/main/res/layout/fragment_detail_figma.xml" value="0.30577223088923555" />
+        <entry key="..\:/figma_task/app/src/main/res/layout/fragment_tasks.xml" value="0.17657657657657658" />
+        <entry key="..\:/figma_task/app/src/main/res/layout/game_fragment.xml" value="0.25" />
+        <entry key="..\:/figma_task/app/src/main/res/layout/item_famous.xml" value="0.2" />
+        <entry key="..\:/figma_task/app/src/main/res/layout/login_screen.xml" value="0.22" />
+        <entry key="..\:/figma_task/app/src/main/res/layout/score_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/figma_task/app/src/main/res/layout/title_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/figma_task/app/src/main/res/layout/yeni_ekran_tasarimi.xml" value="0.25" />
       </map>
     </option>
   </component>

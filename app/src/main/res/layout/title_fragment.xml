@@ -1,0 +1,54 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/background"
+        android:layout_height="match_parent"
+        tools:context=".guess_game.title.TitleFragment">
+
+        <Button
+            android:id="@+id/play_button"
+            android:fontFamily="@font/slackey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:text="@string/play_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guess_the_word" />
+
+        <TextView
+            android:id="@+id/guess_the_word"
+            style="@style/GameTextStyle"
+            android:text="@string/guess_the_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/play_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/you_scored_text" />
+
+        <TextView
+            android:id="@+id/you_scored_text"
+            style="@style/GameTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:text="@string/let_s_start"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/guess_the_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

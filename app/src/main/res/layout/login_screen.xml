@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/Theme.Figma_Login"
     android:background="@color/login_background">
 
     <Button
@@ -18,86 +19,79 @@
         app:layout_constraintBottom_toTopOf="@+id/txtHaveAccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtForgotPassword" />
 
     <EditText
         android:id="@+id/edtPersonName"
+        style="@style/FigmaLoginEditTextStyle"
         android:layout_width="0dp"
         android:layout_height="@dimen/edittext_height"
-        android:layout_marginStart="@dimen/edittext_margin"
-        android:layout_marginEnd="@dimen/edittext_margin"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginBottom="24dp"
-        android:background="@drawable/input_background"
-        android:backgroundTint="@color/white"
+        android:autofillHints="username"
         android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="@dimen/icon_padding"
-        android:ems="10"
-        android:fontFamily="@font/poppins_medium"
         android:hint="@string/password"
         android:inputType="textPersonName"
-        android:padding="@dimen/small_padding"
-        android:textColorHint="@color/text_color_dark"
         app:layout_constraintBottom_toTopOf="@+id/txtForgotPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="username" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUsername" />
 
     <EditText
         android:id="@+id/edtUsername"
+        style="@style/FigmaLoginEditTextStyle"
         android:layout_width="0dp"
         android:layout_height="@dimen/edittext_height"
-        android:layout_marginStart="@dimen/edittext_margin"
-        android:layout_marginEnd="@dimen/edittext_margin"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/input_background"
-        android:backgroundTint="@color/white"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="password"
         android:drawableStart="@drawable/ic_person"
-        android:drawablePadding="@dimen/icon_padding"
-        android:ems="10"
-        android:fontFamily="@font/poppins_medium"
         android:hint="@string/username"
         android:inputType="textPersonName"
-        android:padding="@dimen/small_padding"
-        android:textColorHint="@color/text_color_dark"
         app:layout_constraintBottom_toTopOf="@+id/edtPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="password" />
+        app:layout_constraintTop_toBottomOf="@+id/imageMusic" />
 
     <ImageView
         android:id="@+id/imageMusic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:contentDescription="@string/music_image"
         app:layout_constraintBottom_toTopOf="@+id/edtUsername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/music"
-        android:contentDescription="@string/music_image" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/music" />
 
     <TextView
         android:id="@+id/txtForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="@dimen/medium_margin"
         android:fontFamily="@font/poppins"
         android:text="@string/forgot_password"
         android:textColor="@color/text_color"
         android:textSize="@dimen/small_text_size"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPersonName" />
 
     <TextView
         android:id="@+id/txtHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="@dimen/medium_margin"
         android:fontFamily="@font/poppins"
         android:text="@string/don_t_have_an_account"
         android:textColor="@color/text_color"
@@ -106,20 +100,21 @@
         app:layout_constraintEnd_toStartOf="@+id/txtCreatAccount"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <TextView
         android:id="@+id/txtCreatAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="@dimen/small_margin"
         android:focusable="true"
         android:fontFamily="@font/poppins"
         android:text="@string/create"
         android:textAllCaps="false"
         android:textColor="@color/text_color_dark"
         android:textSize="@dimen/small_text_size"
-        app:layout_constraintBottom_toBottomOf="@+id/txtHaveAccount"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtHaveAccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txtHaveAccount" />

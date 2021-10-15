@@ -1,0 +1,31 @@
+<resources>
+    <style name="CategoryText">
+        <item name="android:background">@drawable/text_background</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">36dp</item>
+    </style>
+
+    <style name="GameTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/slackey</item>
+        <item name="android:textColor">@color/purple_200</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="DetailFigmaButtonAdd" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:color">#FE6D8E</item>
+        <item name="android:background">@drawable/detail_add_button_background</item>
+    </style>
+
+    <style name="FigmaLoginEditTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:background">@drawable/input_background</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:drawablePadding">@dimen/icon_padding</item>
+        <item name="android:padding">@dimen/icon_padding</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColorHint">@color/text_color_dark</item>
+    </style>
+
+</resources>

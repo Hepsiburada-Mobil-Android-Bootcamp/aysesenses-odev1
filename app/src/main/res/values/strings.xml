@@ -7,4 +7,40 @@
     <string name="don_t_have_an_account">Don’t have an account?</string>
     <string name="create">Create</string>
     <string name="music_image">login image</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="film_image">film image</string>
+    <string name="ford_v_ferrari">Ford v Ferrari</string>
+    <string name="_2019">2019</string>
+    <string name="pg_13">PG-13</string>
+    <string name="_2h_32min">2h 32min</string>
+    <string name="action">Action</string>
+    <string name="biography">Biography</string>
+    <string name="drama">Drama</string>
+    <string name="star">star</string>
+    <string name="_150_212">150,212</string>
+    <string name="_10">/10</string>
+    <string name="_8_2">8,2</string>
+    <string name="plot_summary">Plot Summary</string>
+    <string name="plot_sumary_text">American car designer Carroll Shelby and driver Kn Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order.</string>
+
+    <string name="play_again">Play Agaın</string>
+    <string name="you_scored">You Scored</string>
+    <string name="title_text">guess the word!</string>
+    <string name="play_button">Play</string>
+    <string name="get_ready">Get ready to</string>
+    <string name="got_it">Got It</string>
+    <string name="end_game">End game</string>
+    <string name="pass">Pass</string>
+    <string name="skip">Skıp</string>
+    <string name="pause">Pause</string>
+    <string name="start">Start</string>
+    <string name="time">Time :</string>
+    <string name="score">Score :</string>
+    <string name="let_s_start">Let\'s Start</string>
+    <string name="guess_the_word">Guess the Word</string>
+    <string name="figma_log_n_screen">Figma logın screen</string>
+    <string name="figma_deta_l_screen">figma detaıl screen</string>
+    <string name="l_vedata_example">lıvedata example</string>
+    <string name="tasks">TASKS</string>
 </resources>

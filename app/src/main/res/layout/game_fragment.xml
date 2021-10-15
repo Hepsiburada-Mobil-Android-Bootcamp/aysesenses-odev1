@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="gameViewModel"
+            type="com.android.figma_task.guess_game.game.GameViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/correct_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:fontFamily="@font/slackey"
+            android:onClick="@{() -> gameViewModel.onCorrect()}"
+            android:text="@string/got_it"
+            app:layout_constraintBottom_toBottomOf="@+id/tabu_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tabu_button" />
+
+        <Button
+            android:id="@+id/skip_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:fontFamily="@font/slackey"
+            android:onClick="@{() -> gameViewModel.onPass()}"
+            android:text="@string/pass"
+            app:layout_constraintBottom_toBottomOf="@+id/tabu_button"
+            app:layout_constraintEnd_toStartOf="@+id/tabu_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/tabu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/large_margin"
+            android:fontFamily="@font/slackey"
+            android:onClick="@{() -> gameViewModel.onSkip()}"
+            android:text="@string/skip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/correct_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/skip_button" />
+
+        <Button
+            android:id="@+id/stopTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:drawableEnd="@drawable/ic_pause"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/slackey"
+            android:onClick="@{() -> gameViewModel.stopTimer()}"
+            android:text="@string/pause"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/contiuneTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:drawableEnd="@drawable/ic_start"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/slackey"
+            android:onClick="@{() -> gameViewModel.startTimer()}"
+            android:text="@string/start"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tabuWord3"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:layout_marginBottom="@dimen/large_margin"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/tabu_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabuWord2"
+            tools:text="tabu word"/>
+
+        <TextView
+            android:id="@+id/word_text"
+            style="@style/GameTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toTopOf="@+id/tabuWord1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/score"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Word" />
+
+        <TextView
+            android:id="@+id/tabuWord2"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/tabuWord3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabuWord1"
+            tools:text="tabu word"/>
+
+        <TextView
+            android:id="@+id/tabuWord1"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/tabuWord2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/word_text"
+            tools:text="tabu word"/>
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/GameTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:text="@string/time"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/score"
+            app:layout_constraintEnd_toStartOf="@+id/timer_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/score"
+            style="@style/GameTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:text="@string/score"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/score_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/timer_text"
+            style="@style/GameTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/time"
+            app:layout_constraintStart_toEndOf="@+id/time"
+            tools:text="0" />
+
+        <TextView
+            style="@style/GameTextStyle"
+            android:id="@+id/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/score"
+            app:layout_constraintStart_toEndOf="@+id/score"
+            tools:text="0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
